@@ -1,9 +1,10 @@
 package aps;
 
 public class quick {
+    public static int contQuick = 0;
     public static void main(String[] args) {
         
-        int[] vetor = new int[50];
+        int[] vetor = new int[5];
         for(int i = 0; i < vetor.length; i++){
             vetor[i] = (int) Math.floor(Math.random() * 100);
         }
@@ -20,11 +21,11 @@ public class quick {
         for(int i = 0; i < vetor.length; i++){
             System.out.print(vetor[i] + " ");
         }
-        System.err.println();
+        System.out.println();
+        System.out.println("Contador: " + contQuick);
     }
     
     static int quicksort(int[] vetor, int esquerda, int direita){
-        int contQuick = 0;
         if (esquerda < direita){
             contQuick++;
             int p = particao(vetor, esquerda, direita);
