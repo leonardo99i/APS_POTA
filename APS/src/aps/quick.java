@@ -4,7 +4,6 @@ public class quick {
     public static void main(String[] args) {
         
         int[] vetor = new int[50];
-        
         for(int i = 0; i < vetor.length; i++){
             vetor[i] = (int) Math.floor(Math.random() * 100);
         }
@@ -24,12 +23,15 @@ public class quick {
         System.err.println();
     }
     
-    static void quicksort(int[] vetor, int esquerda, int direita){
+    static int quicksort(int[] vetor, int esquerda, int direita){
+        int contQuick = 0;
         if (esquerda < direita){
+            contQuick++;
             int p = particao(vetor, esquerda, direita);
             quicksort(vetor, esquerda, p);
             quicksort(vetor, p + 1, direita);
         }
+        return contQuick;
     }
     
     static int particao(int[] vetor, int esquerda, int direita){
