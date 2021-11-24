@@ -4,7 +4,7 @@ public class quick {
     public static int contQuick = 0;
     public static void main(String[] args) {
         
-        int[] vetor = new int[5];
+        int[] vetor = new int[10000];
         for(int i = 0; i < vetor.length; i++){
             vetor[i] = (int) Math.floor(Math.random() * 100);
         }

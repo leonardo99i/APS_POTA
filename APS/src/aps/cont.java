@@ -5,7 +5,7 @@ public class cont {
     public static int contCount = 0;
 
     public static void main(String[] args) {
-        int[] vetor = new int[10];
+        int[] vetor = new int[10000];
         for (int i = 0; i < vetor.length; i++) {
             vetor[i] = (int) Math.floor(Math.random() * 100);
         }
