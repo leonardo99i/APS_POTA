@@ -25,7 +25,7 @@ public class merge {
         System.out.println("Contador: " + contMerge);
     }
 
-    public static int merge(int[] esquerda, int[] direita, int[] vet, int lado_esquerdo, int lado_direito) {
+    public static int Merge(int[] esquerda, int[] direita, int[] vet, int lado_esquerdo, int lado_direito) {
         int i = 0, e = 0, d = 0;
         while (e < lado_esquerdo && d < lado_direito) {
             if (esquerda[e] > direita[d]) {
@@ -65,7 +65,7 @@ public class merge {
         }
         mergeSort(esquerda, meio);
         mergeSort(direita, tam - meio);
-        merge(esquerda, direita, vet, meio, tam - meio);
+        Merge(esquerda, direita, vet, meio, tam - meio);
         return contMerge;
     }
 }
